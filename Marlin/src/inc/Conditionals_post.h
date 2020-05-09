@@ -88,8 +88,8 @@
 // Define center values for future use
 #define _X_HALF_BED ((X_BED_SIZE) / 2)
 #define _Y_HALF_BED ((Y_BED_SIZE) / 2)
-#define X_CENTER TERN(BED_CENTER_AT_0_0, 0, _X_HALF_BED)
-#define Y_CENTER TERN(BED_CENTER_AT_0_0, 0, _Y_HALF_BED)
+#define X_CENTER TERN(BED_CENTER_AT_0_0, 0 + X_BED_OFFSET, _X_HALF_BED + X_BED_OFFSET)
+#define Y_CENTER TERN(BED_CENTER_AT_0_0, 0 + Y_BED_OFFSET, _Y_HALF_BED + Y_BED_OFFSET)
 
 // Get the linear boundaries of the bed
 #define X_MIN_BED (X_CENTER - _X_HALF_BED)
