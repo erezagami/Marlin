@@ -1946,7 +1946,7 @@
  * Currently handles M108, M112, M410, M876
  * NOTE: Not yet implemented for all platforms.
  */
-//#define EMERGENCY_PARSER
+#define EMERGENCY_PARSER
 
 // Bad Serial-connections can miss a received command by sending an 'ok'
 // Therefore some clients abort after 30 seconds in a timeout.
@@ -2298,7 +2298,7 @@
   #endif
 
   #if AXIS_IS_TMC(Z)
-    #define Z_CURRENT       580
+    #define Z_CURRENT       700
     #define Z_CURRENT_HOME  Z_CURRENT
     #define Z_MICROSTEPS     32
     #define Z_RSENSE          0.11
@@ -2330,7 +2330,7 @@
   #endif
 
   #if AXIS_IS_TMC(E0)
-    #define E0_CURRENT      650
+    #define E0_CURRENT      700
     #define E0_MICROSTEPS    16
     #define E0_RSENSE         0.11
     #define E0_CHAIN_POS     -1
